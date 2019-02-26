@@ -39,23 +39,5 @@ describe "Pokemon" do
       expect(pikachu_from_db.type).to eq("electric")
     end
   end
-
-  describe "BONUS" do
-
-    before do
-      @sql_runner.execute_create_hp_column
-      Pokemon.save('Pikachu', 'electric', @db)
-      Pokemon.save('Magikarp', 'water', @db)
-    end
-
-    let(:pikachu){Pokemon.find(1, @db)}
-    let(:magikarp){Pokemon.find(2, @db)}
-
-    # remove the 'x' before 'it' to run these tests
-    #xit "knows that a pokemon have a default hp of 60" do
-      # The find method should create a new Pokemon object with an id, type, name AND hp after selecting their row from the database by their id number.
-      # remember to also update the initialize method to accept an argument of hp that defaults to nil if not set (so it still passes the non-bonus tests)
-      #expect(@db.execute("SELECT hp FROM pokemon").flatten.first).to eq(60)
-    end
-  end
+    
 end
