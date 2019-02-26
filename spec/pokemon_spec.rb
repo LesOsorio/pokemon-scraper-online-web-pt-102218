@@ -57,4 +57,5 @@ describe "Pokemon" do
       # remember to also update the initialize method to accept an argument of hp that defaults to nil if not set (so it still passes the non-bonus tests)
       expect(@db.execute("SELECT hp FROM pokemon").flatten.first).to eq(60)
     end
-  end 
+  end
+end 
