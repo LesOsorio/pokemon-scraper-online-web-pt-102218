@@ -58,5 +58,3 @@ describe "Pokemon" do
       expect(@db.execute("SELECT hp FROM pokemon").flatten.first).to eq(60)
     end
   end 
-
-  
